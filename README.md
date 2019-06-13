@@ -34,7 +34,7 @@ npm run serve
 npm run build
 ```
 
-## Reproducible workflow  
+## Reproducing the project setup from scratch 
 
 1. Install vue cli if you dont have it already  
    
@@ -54,11 +54,11 @@ npm run build
    `touch assets/main.scss`  
    Add customizations to this file and import bulma and buefy at the *end* of the file (see file in this repo for more info)
 
-5. Make Vue app aware of the file in 3)  
+5. Make Vue app aware of the file in 4)  
    Add `require("./assets/main.scss")` to `src/main.js`  
    Add `Vue.use(Buefy, { defaultIconPack: "fas" })` to `src/main.js` *before* creating the main Vue component
 
-6. Get a CDN link to the fontawesome 5 js file from their website and add it to the `<head>` tag of `public/index.html`. Other options for adding icons include `npm i font-awesome` (but app size will become huge), or using `npm i vue-fontawesome` (smart app size based on imports, but now requires useing component syntax to add icons to code)
+6. Get a CDN link to the fontawesome 5 js file from their website and add it to the `<head>` tag of `public/index.html`. Other options for adding icons include `npm i font-awesome` (but app size will become large), or using `npm i vue-fontawesome` (smart app size based on imports, but now requires using component syntax to add icons to code)
 
-7. All regular bulma classes should work e.g. `class="columns"` plus buefy components should work e.g `<b-button @click="clickMe">Click Me</b-button>`, plus standard fontawesome icon tags should work e.g. `<span class="icon is-medium"><i class="fas fa-spinner fa-pulse"></i></span>`
+7. All regular bulma classes should work e.g. `class="columns"` plus buefy components should work e.g `<b-button @click="clickMe">Click Me</b-button>`, plus standard fontawesome icon tags with modifiers like animation should work e.g. `<span class="icon is-medium"><i class="fas fa-spinner fa-pulse"></i></span>`
 ```
