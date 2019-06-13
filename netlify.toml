@@ -1,0 +1,13 @@
+[build]
+  # Tell netlify the source code is in the project root
+  base = "vue_frontend_driven/"
+  # But the files to serve are in public after running npm build
+  publish = "public"
+  # The actual build command to run
+  command = "npm run build"
+
+[[redirects]]
+  # Tell netlify to redirect all pages to index.html since all our routing is done client-side (i.e. from within the app)
+  from = "/*"
+  to = "/index.html"
+  status = 200

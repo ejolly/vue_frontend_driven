@@ -1,0 +1,10 @@
+// Use this file to make alteration to Bulma's default variables
+@charset "utf-8";
+
+// For example change the default color of the is-primary tag to a purple
+// $purple: #8A4D76;
+// $primary: $purple;
+
+// Finally import bulma (and buefy) *after* customization
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
